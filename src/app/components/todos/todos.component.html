@@ -1,0 +1,5 @@
+<app-add-todo (addTodo)="onAddTodo($event)"></app-add-todo>
+<ul>
+<app-todo *ngFor="let currentTodo of todoList" [todo]="currentTodo" (deleteTodo)="onDeleteTodo($event)"></app-todo>
+</ul>
+
