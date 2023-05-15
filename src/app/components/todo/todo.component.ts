@@ -13,4 +13,7 @@ export class TodoComponent {
   onDelete(){
     this.delete.emit(this.todo.id);
   }
+  onCheckTodo(check:boolean){
+    this.todo.completed = check;
+  }
 }

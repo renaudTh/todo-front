@@ -1,5 +1,4 @@
 <form (submit)="onSubmit($event)">
-    <input type="text" name="title" placeholder="Task title" [(ngModel)]="title" autocomplete="off">
-    <input type="text" name="details" placeholder="Task details" [(ngModel)]="details" autocomplete="off">
-    <input type="submit" value="Add task">
+    <app-checked></app-checked>
+    <input type="text" name="title" placeholder="Add task" [(ngModel)]="title" autocomplete="off">
 </form>

@@ -1,5 +1,6 @@
-<li>
-    <h3>{{todo.title}}</h3>
-    <p>{{todo.details}}</p>
-    <button (click)="onDelete()">Delete</button>
-</li>
+<div class="todo">
+    <app-checked (checkTodo)="onCheckTodo($event)"></app-checked>
+    <div class="content" [ngClass]="{'checked': todo.completed}">{{todo.title}}</div>
+    <div class="delete" (click)="onDelete()"><img src="../../../assets/images/icon-cross.svg" alt="delete item" srcset=""></div>   
+</div>
+

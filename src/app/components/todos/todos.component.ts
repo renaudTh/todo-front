@@ -25,4 +25,8 @@ export class TodosComponent implements OnInit{
     this.todoService.deleteTodo(id);
     this.todoList = this.todoList.filter(todo => todo.id !== id);
   }
+
+  getItemsNumber(){
+    return this.todoList.filter(elt => !elt.completed).length;
+  }
 }

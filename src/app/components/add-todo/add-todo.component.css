@@ -1,0 +1,24 @@
+
+:host{
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+form {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    align-items:center;
+}
+
+input[type=text]{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+input[type=text]:focus{
+
+    outline: none;
+}

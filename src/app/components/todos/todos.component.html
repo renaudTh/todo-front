@@ -1,5 +1,14 @@
+
+<div class="header">
+    <div>TODO</div>
+    <div><img src="../../../assets/images/icon-moon.svg" alt=""></div>
+</div>
+
 <app-add-todo (addTodo)="onAddTodo($event)"></app-add-todo>
-<ul>
-<app-todo *ngFor="let currentTodo of todoList" [todo]="currentTodo" (deleteTodo)="onDeleteTodo($event)"></app-todo>
-</ul>
+<div class="todo-container">
+<app-todo *ngFor="let currentTodo of todoList" [todo]="currentTodo" (deleteTodo)="onDeleteTodo($event)" ></app-todo>
+<app-filters [itemsNumber]="getItemsNumber()"></app-filters>
+</div>
+
+
 

@@ -9,7 +9,7 @@ import { Todo } from 'src/app/models/todo.model';
 export class AddTodoComponent {
 
   title:string = '';
-  details :string ='';
+  completed: boolean = false;
 
   @Output('addTodo') submit:EventEmitter<Todo> = new EventEmitter();
 
@@ -23,12 +23,11 @@ export class AddTodoComponent {
     }
     let toSend:Todo = {
       title: this.title,
-      details:this.details,
-      date: Date.now().toString()
+      completed: this.completed
     }
     this.submit.emit(toSend);
 
     this.title=''
-    this.details=''
+    this.completed=false;
   }
 }

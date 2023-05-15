@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { CheckedComponent } from './checked/checked.component';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoComponent,
-    AddTodoComponent
+    AddTodoComponent,
+    CheckedComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
