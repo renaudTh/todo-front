@@ -33,4 +33,43 @@ export class TodoService {
     let data = res.json();
     return data;
   }
+
+  async checkTodo(todo: Todo){
+    let res = await fetch(`${this.apiUrl}`,{
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(todo),
+    });
+    let data = res.json();
+    return data;
+  }
+
+  async getActive(){
+    let res = await fetch(`${this.apiUrl}/active`,{
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let data = res.json();
+    return data;
+  }
+  async getCompleted(){
+    let res = await fetch(`${this.apiUrl}/completed`,{
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let data = res.json();
+    return data;
+  }
+
+  async clearCompleted(){
+  await fetch(`${this.apiUrl}/completed`,{
+      method: 'DELETE',
+    });
+  }
 }

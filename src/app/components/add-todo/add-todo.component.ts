@@ -26,8 +26,10 @@ export class AddTodoComponent {
       completed: this.completed
     }
     this.submit.emit(toSend);
-
     this.title=''
-    this.completed=false;
+  }
+
+  onCheckTodo(checked:boolean){
+    this.completed = checked;
   }
 }

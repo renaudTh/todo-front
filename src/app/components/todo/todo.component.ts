@@ -9,11 +9,16 @@ export class TodoComponent {
   
   @Input() todo!:Todo;
   @Output('deleteTodo') delete:EventEmitter<number> = new EventEmitter();
-
+  @Output('updateTodo') update:EventEmitter<Todo> = new EventEmitter();
   onDelete(){
     this.delete.emit(this.todo.id);
   }
   onCheckTodo(check:boolean){
     this.todo.completed = check;
+    this.update.emit(this.todo);
+  }
+  onClick(){
+    this.todo.completed = !this.todo.completed;
+    this.update.emit(this.todo)
   }
 }

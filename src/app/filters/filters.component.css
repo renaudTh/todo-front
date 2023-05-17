@@ -9,6 +9,18 @@
     padding-right: 22px;
 
 }
+
+.filter{
+    cursor: pointer;
+}
+
+.filter:hover{
+    color: hsl(235, 19%, 35%);
+}
+
+.active{
+    color: hsl(220, 98%, 61%);
+}
 span{
     margin-right: 10px;
 }

@@ -2,11 +2,10 @@
 
     <div>{{ itemsNumber }} Items left</div>
     <div>
-        <span>All</span>
-        <span>Active</span>
-        <span>Completed</span>
+        <span *ngFor="let filter of filters" [id]="filter.id" (click)="onSelect(filter.id)"
+            [class]="setClass(filter.id)">{{filter.name}}</span>
     </div>
-    <div>
+    <div class="filter" (click)="onClearCompleted()">
         Clear Completed
     </div>
 </div>

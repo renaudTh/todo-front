@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-checked',
@@ -6,8 +6,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./checked.component.css']
 })
 export class CheckedComponent {
-  checked:boolean = false;
 
+  @Input() checked!:boolean;
   @Output('checkTodo') check: EventEmitter<boolean> = new EventEmitter(); 
   onCheck(){
 

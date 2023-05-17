@@ -16,6 +16,7 @@
 .content{
     width: 80%;
     color: hsl(233, 14%, 35%);
+    cursor:pointer; 
 }
 
 .delete:hover{
